@@ -1,8 +1,8 @@
-import React from "react"
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native"
-import { MaterialIcons }  from "@expo/vector-icons"
+import React from 'react';
+import { StyleSheet, Text, View, TouchableOpacity, } from "react-native";
+import { MaterialIcons } from '@expo/vector-icons';
 
-export default TaskItem = (props) => {
+function TaskItem(props) {
     return (
         <View style={styles.container}>
             <View style={styles.indexContainer}>
@@ -11,12 +11,13 @@ export default TaskItem = (props) => {
             <View style={styles.taskContainer}>
                 <Text style={styles.task}>{props.task}</Text>
                 <TouchableOpacity onPress={() => props.deleteTask()}>
-                    <MaterialIcons style={styles.delete} name="delete" size={18} color="#fff" />
+                    <MaterialIcons style={styles.delete} name="delete" size={18} color='#fff' />
                 </TouchableOpacity>
             </View>
         </View>
-    )
+    );
 }
+
 
 const styles = StyleSheet.create({
     container: {
@@ -55,4 +56,6 @@ const styles = StyleSheet.create({
     delete: {
         marginLeft: 10,
     },
-})
+});
+
+export default TaskItem
